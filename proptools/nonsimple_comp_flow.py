@@ -23,11 +23,26 @@ proptools
 2016 Oct 3
 '''
 
-from scipy.misc import derivative
 from scipy.integrate import ode
 import numpy as np
 
 from proptools import nozzle
+
+
+def _derivative(func, x0, dx=1.0):
+    """Numerical derivative using central difference.
+
+    This is a replacement for the deprecated scipy.misc.derivative.
+
+    Arguments:
+        func: Function to differentiate.
+        x0: Point at which to evaluate the derivative.
+        dx: Spacing for the finite difference.
+
+    Returns:
+        The numerical derivative of func at x0.
+    """
+    return (func(x0 + dx) - func(x0 - dx)) / (2 * dx)
 
 
 def differential(x, state, mdot, c_p, gamma, f_f, f_q, f_A):
@@ -62,7 +77,7 @@ def differential(x, state, mdot, c_p, gamma, f_f, f_q, f_A):
     # Duct diameter
     D = (A / np.pi)**0.5
     # Duct area derivative
-    dA_dx = derivative(f_A, x, dx=1e-6)
+    dA_dx = _derivative(f_A, x, dx=1e-6)
 
     # Use Equation 4 from Bandyopadhyay to find dT_o/dx.
     dT_o_dx = f_q(x) * np.pi * D / (mdot * c_p)

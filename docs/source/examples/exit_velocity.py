@@ -11,4 +11,4 @@ T_c = 3000.    # Chamber temperature [units: kelvin]
 # Compute the exit velocity
 v_e = isentropic.velocity(v_1=0, p_1=p_c, T_1=T_c, p_2=p_e, gamma=gamma, m_molar=m_molar)
 
-print 'Exit velocity = {:.0f} m s**-1'.format(v_e)
+print('Exit velocity = {:.0f} m s**-1'.format(v_e))

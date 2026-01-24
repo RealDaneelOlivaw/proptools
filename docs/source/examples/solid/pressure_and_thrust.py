@@ -22,5 +22,5 @@ p_c = solid.chamber_pressure(A_b / A_t, a, n, rho_solid, c_star)
 # Compute the sea level thrust [units: newton].
 F = nozzle.thrust(A_t, p_c, p_e, gamma)
 
-print 'Chamber pressure = {:.1f} MPa'.format(p_c * 1e-6)
-print 'Thrust (sea level) = {:.1f} kN'.format(F * 1e-3)
+print('Chamber pressure = {:.1f} MPa'.format(p_c * 1e-6))
+print('Thrust (sea level) = {:.1f} kN'.format(F * 1e-3))

@@ -8,4 +8,4 @@ T_c = 3000.    # Chamber temperature [units: kelvin]
 # Compute the characteristic velocity [units: meter second**-1]
 c_star = nozzle.c_star(gamma, m_molar, T_c)
 
-print 'Ideal characteristic velocity = {:.0f} m s**-1'.format(c_star)
+print('Ideal characteristic velocity = {:.0f} m s**-1'.format(c_star))

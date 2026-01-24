@@ -17,6 +17,6 @@ I_sp = C_f * c_star / nozzle.g    # Specific impulse [units: second]
 F = A_t * p_c * C_f    # Thrust [units: newton]
 m_dot = A_t * p_c / c_star    # Propellant mass flow [units: kilogram second**-1]
 
-print 'Specific impulse = {:.1f} s'.format(I_sp)
-print 'Thrust = {:.1f} kN'.format(F * 1e-3)
-print 'Mass flow = {:.1f} kg s**-1'.format(m_dot)
+print('Specific impulse = {:.1f} s'.format(I_sp))
+print('Thrust = {:.1f} kN'.format(F * 1e-3))
+print('Mass flow = {:.1f} kg s**-1'.format(m_dot))

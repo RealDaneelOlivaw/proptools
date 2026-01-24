@@ -18,6 +18,6 @@ eta_T = electric.total_efficiency(
 # Compute the input power [units: watt].
 P_in = P_jet / eta_T
 
-print 'Jet power = {:.0f} W'.format(P_jet)
-print 'Total efficiency = {:.3f}'.format(eta_T)
-print 'Input power = {:.0f} W'.format(P_in)
+print('Jet power = {:.0f} W'.format(P_jet))
+print('Total efficiency = {:.3f}'.format(eta_T))
+print('Input power = {:.0f} W'.format(P_in))

@@ -8,4 +8,4 @@ gamma = 1.2    # Exhaust heat capacity ratio [units: dimensionless]
 # Solve for the expansion ratio [units: dimensionless]
 exp_ratio = nozzle.er_from_p(p_c, p_e, gamma)
 
-print 'Expansion ratio = {:.1f}'.format(exp_ratio)
+print('Expansion ratio = {:.1f}'.format(exp_ratio))
