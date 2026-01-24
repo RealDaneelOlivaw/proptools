@@ -153,7 +153,7 @@ def throat_area(m_dot, p_c, T_c, gamma, m_molar):
 
 
 def mass_flow(A_t, p_c, T_c, gamma, m_molar):
-    """Find the mass flow through a choked nozzle.
+    r"""Find the mass flow through a choked nozzle.
 
     Given gas stagnation conditions and a throat area, find the mass flow through a
     choked nozzle. See :ref:`choked-flow-tutorial-label` for details.

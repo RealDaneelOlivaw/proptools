@@ -1,5 +1,4 @@
 """Generic electric propulsion design equations."""
-from __future__ import division
 import numpy as np
 from scipy.optimize import minimize
 from proptools.constants import charge, amu_kg, g

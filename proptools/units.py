@@ -1,8 +1,6 @@
 ''' Unit conversions.
 '''
 
-from __future__ import division
-
 
 def meter2inch(x):
     return x / 0.0254

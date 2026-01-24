@@ -26,7 +26,7 @@ def adiabatic_wall_temperature(T_c, M, gamma, r=0.9, Pr=None):
     return T_c * (1 + r * (gamma - 1) / 2 * M**2) / (1 + (gamma - 1) / 2 * M**2)
 
 def long_tube_coeff(mass_flux, D, c_p, mu, k):
-    """Convection coefficient for flow in a long tube.
+    r"""Convection coefficient for flow in a long tube.
 
     This model for convection was developed from experiments with fully-developed
     flow in long tubes. It is taken from Eq. 11.35 in Hill & Peterson:
@@ -101,7 +101,7 @@ def bartz(p_c, c_star, D_t, D, c_p, mu_e, Pr, sigma=1.):
 
 
 def bartz_sigma_sanchez(T_e, T_avg, w=0.6):
-    """Correction factor for the Bartz equation.
+    r"""Correction factor for the Bartz equation.
 
     Reference:
       [1] M. Martinez-Sanchez, "Convective Heat Transfer: Reynolds Analogy,"
@@ -123,7 +123,7 @@ def bartz_sigma_sanchez(T_e, T_avg, w=0.6):
 
 
 def bartz_sigma_huzel(T_c, T_w, M, gamma):
-    """Correction factor for the Bartz equation.
+    r"""Correction factor for the Bartz equation.
 
     Reference:
       [1] Huzel and Huang Equation 4-14.

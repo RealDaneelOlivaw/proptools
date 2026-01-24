@@ -4,7 +4,6 @@ Matt Vernacchia
 proptools
 2016 Apr 3
 '''
-from __future__ import division
 from proptools import nozzle
 import math
 import numpy as np
@@ -264,7 +263,7 @@ def pump_efficiency_demo():
             Ns_us[i] = pump_specific_speed_us(dp, m, rho, N[i])
         plt.semilogx(Ns_us, eta, label='Q = {0:.0f} gpm'.format(m_dot2gpm(m, rho)))
     plt.xlabel('Ns [US units]')
-    plt.ylabel('$\eta$ [-]')
+    plt.ylabel(r'$\eta$ [-]')
     plt.legend()
     plt.grid(True)
 
@@ -299,7 +298,7 @@ def turbine_efficiency_demo():
     eta = [ssi_turbine_efficiency(u) for u in uco]
     plt.loglog(uco, eta)
     plt.xlabel('$u / c_o$')
-    plt.ylabel('$\eta$')
+    plt.ylabel(r'$\eta$')
     plt.grid(True)
 
 

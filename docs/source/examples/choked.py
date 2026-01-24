@@ -12,9 +12,9 @@ A_t = pi * (0.1 / 2)**2    # Throat area [units: meter**2]
 
 # Check choking
 if nozzle.is_choked(p_c, p_e, gamma):
-    print 'The flow is choked'
+    print("The flow is choked")
 
 # Compute the mass flow [units: kilogram second**-1]
 m_dot = nozzle.mass_flow(A_t, p_c, T_c, gamma, m_molar)
 
-print 'Mass flow = {:.1f} kg s**-1'.format(m_dot)
+print("Mass flow = {:.1f} kg s**-1".format(m_dot))

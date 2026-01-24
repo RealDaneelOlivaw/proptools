@@ -8,7 +8,7 @@
   thrust_curve
 """
 
-from scipy.integrate import cumtrapz
+from scipy.integrate import cumulative_trapezoid
 
 from proptools import nozzle
 
@@ -121,6 +121,6 @@ def thrust_curve(A_b, x, A_t, A_e, p_a, a, n, rho_solid, c_star, gamma):
     F = nozzle.thrust(A_t, p_c, p_e, gamma, p_a, A_e / A_t)
 
     # Compute the time to reach each flame progress distance x [units: second]
-    t = cumtrapz(1 / r, x, initial=0)
+    t = cumulative_trapezoid(1 / r, x, initial=0)
 
     return (t, p_c, F)
